@@ -2,7 +2,15 @@
 
 Native Linux alternative to [LuaTools](https://lua.tools) — a Steam library manager with game details, manifest viewer, and quick actions.
 
-![screenshot](https://raw.githubusercontent.com/CallWhiz56/luatools-linux/main/.github/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/kyle-scofield/luatools-linux/main/.github/screenshot.png)
+
+## Install
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/kyle-scofield/luatools-linux/main/install.sh | sh
+```
+
+Then run `luatools` — opens as a desktop app.
 
 ## Features
 
@@ -11,7 +19,9 @@ Native Linux alternative to [LuaTools](https://lua.tools) — a Steam library ma
 - Launch games, open install folders
 - Manifest viewer, file browser
 - Proton version listing
-- Dark purple theme
+- Drop zone for .lua / .manifest / .zip files
+- Desktop app (Chromium app mode / Firefox)
+- `.desktop` entry for app menu
 
 ## Stack
 
@@ -19,25 +29,14 @@ Native Linux alternative to [LuaTools](https://lua.tools) — a Steam library ma
 - **Frontend**: React 19 + Vite 6 + Tailwind CSS 4 + Framer Motion
 - **Data**: Steam appmanifest ACF parsing, Steam Store API
 
-## Install
+## Dev
 
 ```bash
-git clone https://github.com/CallWhiz56/luatools-linux.git
+git clone https://github.com/kyle-scofield/luatools-linux.git
 cd luatools-linux
-npm install
-cd webapp && npm install && cd ..
+npm install && cd webapp && npm install && cd ..
 npm run dev
 ```
-
-Open `http://localhost:5173`
-
-## Build
-
-```bash
-npm run build
-```
-
-Serves the built frontend from `webapp/dist/` via Express on port 3002.
 
 ## Requirements
 
