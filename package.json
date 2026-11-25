@@ -1,0 +1,17 @@
+{
+  "name": "luatools-linux",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run webapp\"",
+    "server": "node server/index.js",
+    "webapp": "cd webapp && npx vite --host",
+    "build": "cd webapp && npx vite build"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2",
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
+  }
+}
