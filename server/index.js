@@ -225,7 +225,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const distDir = join(__dirname, '..', 'webapp', 'dist');
 if (existsSync(distDir)) {
   app.use(express.static(distDir));
-  app.get('*', (_, res) => res.sendFile(join(distDir, 'index.html')));
+  app.get('/{*path}', (_, res) => res.sendFile(join(distDir, 'index.html')));
 }
 
 // --- Start ---

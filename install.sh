@@ -66,13 +66,13 @@ say "  ${G}✔${R} Исходный код"
 
 # Install deps
 say "  Установка зависимостей…"
-npm install --omit=dev --silent 2>/dev/null
-cd webapp && npm install --omit=dev --silent 2>/dev/null && cd ..
+npm install --silent 2>/dev/null
+cd webapp && npm install --silent 2>/dev/null && cd ..
 say "  ${G}✔${R} Зависимости"
 
 # Build frontend
 say "  Сборка фронтенда…"
-cd webapp && npx vite build --silent 2>/dev/null && cd ..
+cd webapp && npx vite build 2>/dev/null && cd ..
 say "  ${G}✔${R} Фронтенд собран"
 
 # Create launcher
