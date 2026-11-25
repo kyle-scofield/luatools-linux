@@ -27,7 +27,7 @@ export default function Cover({ appid, name, className = '', aspect = 'aspect-[4
     <img
       src={URLS[idx](appid)}
       alt={name || ''}
-      className={`${aspect} object-cover ${className}`}
+      className={`block object-cover ${aspect} ${className}`}
       loading="lazy"
       onError={handleError}
     />
